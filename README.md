@@ -1,7 +1,5 @@
 # EX-NO-11-ELLIPTIC-CURVE-CRYPTOGRAPHY-ECC
 
-## NAME: ARUL KUMARAN S A
-## REG.NO : 212224040030
 
 ## Aim:
 To Implement ELLIPTIC CURVE CRYPTOGRAPHY(ECC)
@@ -77,18 +75,18 @@ int main() {
     scanf("%lld %lld", &a, &b);
     printf("Enter the base point G (x and y): ");
     scanf("%lld %lld", &G.x, &G.y);
-    printf("Enter ARUL's private key: ");
+    printf("Enter VISHAL's private key: ");
     scanf("%lld", &privateA);
-    printf("Enter KUMARAN's private key: ");
+    printf("Enter RAJESH's private key: ");
     scanf("%lld", &privateB);
     publicA = scalarMultiplication(G, privateA, a, p);
     publicB = scalarMultiplication(G, privateB, a, p);
-    printf("ARUL's public key: (%lld, %lld)\n", publicA.x, publicA.y);
-    printf("KUMARAN's public key: (%lld, %lld)\n", publicB.x, publicB.y);
+    printf("VISHAL's public key: (%lld, %lld)\n", publicA.x, publicA.y);
+    printf("RAJESH's public key: (%lld, %lld)\n", publicB.x, publicB.y);
     sharedSecretA = scalarMultiplication(publicB, privateA, a, p);
     sharedSecretB = scalarMultiplication(publicA, privateB, a, p);
-    printf("Shared secret computed by ARUL: (%lld, %lld)\n", sharedSecretA.x, sharedSecretA.y);
-    printf("Shared secret computed by KUMARAN: (%lld, %lld)\n", sharedSecretB.x, sharedSecretB.y);
+    printf("Shared secret computed by VISHAL: (%lld, %lld)\n", sharedSecretA.x, sharedSecretA.y);
+    printf("Shared secret computed by RAJESH: (%lld, %lld)\n", sharedSecretB.x, sharedSecretB.y);
     if (sharedSecretA.x == sharedSecretB.x && sharedSecretA.y == sharedSecretB.y)
         printf("Key exchange successful. Both shared secrets match!\n");
     else
@@ -99,7 +97,8 @@ int main() {
 
 
 ## Output:
-<img width="1720" height="976" alt="image" src="https://github.com/user-attachments/assets/0f761a41-9445-46a8-9244-86e2d89d23af" />
+<img width="1623" height="586" alt="image" src="https://github.com/user-attachments/assets/7d53ab6d-de50-4dab-9bd1-3e42caa74eb0" />
+
 
 
 
